@@ -108,7 +108,7 @@ If I were building this as a real product rather than a prototype, three things 
 ## Running it locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/lensa.git
+git clone https://github.com/ElisaesterYsn/lensa.git
 cd lensa
 npm install
 npm run dev
