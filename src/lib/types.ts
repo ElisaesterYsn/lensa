@@ -35,3 +35,19 @@ export type ActivityEntry = {
   duration?: string; // e.g. "47 seconds"
   note?: string; // optional note for revoked/pending states
 };
+
+export type StoredDataItem = {
+  id: string
+  label: string          // "MyKad number"
+  value?: string         // optional sample, e.g. "•••• 1234"
+  source: string         // "You (provided 3 days ago)" or "JPJ"
+  usedFor: string        // "Government services"
+  retention: string      // "Never (until you remove it)" or "Auto-deletes in 87 days"
+  removable: boolean
+}
+
+export type NotStoredItem = {
+  id: string
+  label: string
+  reason: string
+}

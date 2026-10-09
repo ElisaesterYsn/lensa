@@ -2,6 +2,8 @@ import type { Permission, Task } from "./types";
 
 import type { ActivityEntry } from "./types";
 
+import type { StoredDataItem, NotStoredItem } from './types'
+
 export const ACTIVITY: ActivityEntry[] = [
   {
     id: "act-001",
@@ -118,3 +120,65 @@ export const TASKS: Task[] = [
     priority: "info",
   },
 ];
+
+export const STORED_DATA: StoredDataItem[] = [
+  {
+    id: 'mykad',
+    label: 'MyKad number',
+    value: '•••• 1234',
+    source: 'You (provided 3 days ago)',
+    usedFor: 'Government services',
+    retention: 'Never (until you remove it)',
+    removable: true,
+  },
+  {
+    id: 'vehicle',
+    label: 'Vehicle registration',
+    value: 'WXY 1234',
+    source: 'JPJ',
+    usedFor: 'Road tax, summons',
+    retention: 'Auto-deletes in 87 days',
+    removable: true,
+  },
+  {
+    id: 'payment',
+    label: 'Payment method',
+    value: 'Maybank ••4821',
+    source: 'You',
+    usedFor: 'Bill payments',
+    retention: 'Auto-deletes in 87 days',
+    removable: true,
+  },
+  {
+    id: 'water-account',
+    label: 'Air Selangor account',
+    value: '•••• 8842',
+    source: 'Air Selangor',
+    usedFor: 'Water bill payments',
+    retention: 'Auto-deletes in 87 days',
+    removable: true,
+  },
+]
+
+export const NOT_STORED: NotStoredItem[] = [
+  {
+    id: 'ic-photo',
+    label: 'Your IC photo',
+    reason: 'The agency that issued your MyKad already has it. We never need to see it.',
+  },
+  {
+    id: 'transactions',
+    label: 'Transaction history',
+    reason: 'Read-only at the moment of payment. Never saved to Lensa.',
+  },
+  {
+    id: 'diagnosis',
+    label: 'Health diagnosis',
+    reason: 'Outside Lensa\u2019s scope entirely. We only see appointment dates.',
+  },
+  {
+    id: 'location',
+    label: 'Location history',
+    reason: 'Lensa does not track where you are. Ever.',
+  },
+]
