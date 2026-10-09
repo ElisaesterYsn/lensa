@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Trust palette */
+  --color-trust-50: #f0f7f7;
+  --color-trust-100: #d9ebeb;
+  --color-trust-300: #7ab5b5;
+  --color-trust-500: #2d6a6a;
+  --color-trust-700: #1a4444;
+  --color-trust-900: #0d2424;
+
+  /* Signal palette */
+  --color-signal-amber: #d97706;
+  --color-signal-red: #b91c1c;
+  --color-signal-green: #15803d;
+
+  /* Surface palette */
+  --color-surface-base: #fafafa;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f4f4f5;
+
+  /* Font */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Radius */
+  --radius-card: 14px;
+
+  /* Animation */
+  --animate-pulse-soft: pulse-soft 1.4s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
+:root {
+  color-scheme: light;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-surface-base);
+  color: #18181b;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
